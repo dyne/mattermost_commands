@@ -1,0 +1,18 @@
+{
+  "template": "https://github.com/dyne/starters",
+  "commit": "4f756cc0a66c09aebf61786e5db8251290b19252",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "mattermost-commands",
+      "project_slug": "mattermost_commands",
+      "project_description": "Custom commands for chat.dyne.org",
+      "full_name": "Puria Nafisi Azizi",
+      "email": "puria@dyne.org",
+      "repo": "github.com/dyne/mattermost_commands",
+      "go_version": "1.22",
+      "_template": "https://github.com/dyne/starters"
+    }
+  },
+  "directory": "go"
+}
