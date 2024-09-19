@@ -34,7 +34,7 @@
 
 Download the binary
 ```bash
-wget https://github.com/dyne/mattermost_commands/releases/download/v1.1.1/mattermost_commands && chmod +x mattermost_commands
+curl -LO https://github.com/dyne/mattermost_commands/releases/latest/download/mattermost_commands && chmod +x mattermost_commands
 ```
 **[🔝 back to top](#toc)**
 
