@@ -35,7 +35,10 @@ It'll be great to have you there—let's connect and make it a good one! 💫�
 `, address, r.FormValue("user_name"))
 	data := Notification{text, "in_channel", address}
 	w.Header().Set("Content-type", "application/json")
-	json.NewEncoder(w).Encode(&data)
+	err = json.NewEncoder(w).Encode(&data)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func getEncodedAddress(path string) string {

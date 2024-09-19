@@ -1,11 +1,21 @@
 package main
 
 import (
-  "log"
-  "net/http"
+	"net/http"
+	"time"
 )
 
 func main() {
-  handler := http.HandlerFunc(MiniServer)
-  log.Fatal(http.ListenAndServe(":4444", handler))
+	handler := http.HandlerFunc(MiniServer)
+
+	server := &http.Server{
+		Addr:              ":4444",
+		ReadHeaderTimeout: 3 * time.Second,
+		Handler:           handler,
+	}
+
+	err := server.ListenAndServe()
+	if err != nil {
+		panic(err)
+	}
 }
